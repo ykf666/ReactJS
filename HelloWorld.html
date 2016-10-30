@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+<div id="root">
+    <!-- This div's content will be managed by React. -->
+</div>
+<script type="text/babel">
+    var Hello = React.createClass({
+        render: function(){
+            var styleObj = {
+                color: 'red',
+                fontSize:'36px'
+            };
+            return <div style={styleObj}>Hello {this.props.name}</div>;
+        }
+    });
+    ReactDOM.render(<Hello name="World"/>, document.getElementById('root'));
+    document.getElementById("root").style.paddingLeft='104px';
+</script>
+</body>
+</html>
